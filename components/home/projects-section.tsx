@@ -12,7 +12,8 @@ export function ProjectsSection() {
 
   useEffect(() => {
     const fetchProjects = async () => {
-      getProjects(setProjects)
+      const data = await getProjects();
+      setProjects(data)
       setLoading(false)
     }
 

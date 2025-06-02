@@ -24,7 +24,7 @@ const ProjectPage = () => {
   useEffect(() => {
     const fetchProject = async () => {
       const res = await axios.get(`${domain}/api/project`, {
-        params: { id: projectId },
+        params: { id: projectId, clientId: process.env.NEXT_PUBLIC_CLIENT_ID },
       });
 
       const data = res.data;
