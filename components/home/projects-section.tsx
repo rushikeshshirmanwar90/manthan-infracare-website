@@ -24,6 +24,7 @@ export function ProjectsSection() {
   const [filter, setFilter] = useState("all")
 
   const filteredProjects = filter === "all" ? projects : projects.filter((project) => project.projectType === filter)
+
   return (
     <section id="projects" className="py-20 bg-[#E5E7EB]">
       <div className="container mx-auto px-4">

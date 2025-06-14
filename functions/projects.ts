@@ -5,7 +5,7 @@ import { domain } from "@/domain";
 export const getProjects = async (): Promise<Project[]> => {
   try {
     const res = await axios.get(
-      `${domain}/api/project?/client?clientId=${process.env.NEXT_PUBLIC_CLIENT_ID}`
+      `${domain}/api/project?clientId=${process.env.NEXT_PUBLIC_CLIENT_ID}`
     );
     return res.data;
   } catch (error) {
